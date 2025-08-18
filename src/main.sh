@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-fd . ~ -e flac | fzf | python /home/$USER/.local/bin/player.py
+fd . ~ -e wav | fzf | python /home/$USER/.local/bin/player-wav.py

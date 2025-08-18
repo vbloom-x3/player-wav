@@ -1,7 +1,7 @@
 import vlc
 import time
 import shutil
-from mutagen.flac import FLAC
+from mutagen.File import File
 import sys
 import os
 
@@ -16,11 +16,7 @@ if not os.path.exists(audio_file):
     sys.exit(1)
 
 # Fetch metadata
-audio = FLAC(audio_file)
-title = audio.get("title", ["Unknown Title"])[0]
-artist = audio.get("artist", ["Unknown Artist"])[0]
-album = audio.get("album", ["Unknown Album"])[0]
-full_title = f"{album} -> {title} — {artist}"
+full_title=audio_file
 
 # Print initial info (only once)
 print(f"Now playing: {full_title}")

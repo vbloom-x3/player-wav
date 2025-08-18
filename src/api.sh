@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-python /home/$USER/.local/bin/player.py "$@"
+python /home/$USER/.local/bin/player-wav.py "$@"
