@@ -15,7 +15,14 @@ if not os.path.exists(audio_file):
     print("File not found!")
     sys.exit(1)
 
-# Fetch metadata
+from mutagen import File
+
+audio = File(audio_file)
+if audio is None:
+    print("Unsupported or invalid file format")
+else:
+    print(audio.info.length)  # Example: print track length
+
 full_title=audio_file
 
 # Print initial info (only once)
