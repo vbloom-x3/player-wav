@@ -1,7 +1,7 @@
 import vlc
 import time
 import shutil
-from mutagen.File import File
+# from mutagen.File import File
 import sys
 import os
 
